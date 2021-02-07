@@ -1,5 +1,6 @@
-FROM python:3.7-alpine
+FROM python:3.5-slim
 
+LABEL maintainer="smithanthaya@gmail.com"
 
 USER root
 
@@ -13,4 +14,4 @@ EXPOSE 80
 
 ENV NAME World
 
-CMD ["python", "web.py"]
+CMD ["python", "app.py"]
