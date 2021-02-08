@@ -1,0 +1,19 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: flask-app
+  namespace: development
+  labels:
+    app: flask-app
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        apps: flask-app
+    spec:
+      containers:
+      - name: flask-app
+        image: sumanth55/case-study-b
+        ports:
+        - containerPort: 8080
